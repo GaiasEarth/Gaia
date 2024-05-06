@@ -1,0 +1,77 @@
+body, html {
+    font-family: 'pixel', monospace;
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #fff;
+    height: 100%;
+  }
+  
+  .container {
+    /*display: flex;*/
+    height: 100%;
+  }
+  
+  .sidebarEmpty {
+    position: relative;
+    left: 0rem;
+    width: 25%; /* 1/4th of the container */
+    overflow-y: auto; /* Enable vertical scrollbar */
+    background-color: blue;
+    font-family: 'pixel', monospace;
+    font-size: 36px;
+    color: black;
+    z-index: 0;
+  }
+  
+  .sidebar {
+    width: 65%; /* 1/4th of the container */
+    position: absolute;
+    overflow-y: auto; /* Enable vertical scrollbar */
+    background-color: clear;
+    font-family: 'pixel', monospace;
+    font-size: 36px;
+    left: 35rem;
+    z-index: 1;
+  }
+  
+  a {
+    border: 3px solid black ;
+    background-color: white;
+    
+  }
+  
+  .main-content {
+    width: 75%; /* 3/4th of the container */
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  li {
+    padding:.5rem;
+  }
+  
+  a {
+    color: blue;
+  }
+  
+  a:hover {
+    color: green;
+    transition: all 1s ease;
+  }
+  
+  li {
+    
+  }
+  
+  .sidebar a:visited {
+    margin-left: 35rem; /* Adjust the left margin as needed */
+  }
+  
+  /* Move non-visited links to the right */
+  .sidebar a:not(:visited) {
+    margin-left: 2rem; /* Adjust the left margin as needed */
+  }
+  
