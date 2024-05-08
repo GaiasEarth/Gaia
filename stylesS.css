@@ -10,73 +10,90 @@ body, html {
       background-color: #000;
       color: #fff;
     height: 100%;
+
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
   }
   
-  .container {
-    /*display: flex;*/
+  img {
+    width: 100%;
     height: 100%;
+    position: fixed;
+    left: 0rem;
+    z-index: 3;
+    pointer-events:none;
+    background:none !important;
+  }
+  .container {
+    display: flex;
+    height: 100%;
+    
   }
   
   .sidebarEmpty {
     position: relative;
     left: 0rem;
-    width: 25%; /* 1/4th of the container */
-    overflow-y: auto; /* Enable vertical scrollbar */
-    background-color: blue;
-    font-family: 'pixel', monospace;
-    font-size: 36px;
-    color: black;
-    z-index: 0;
-  }
-  
-  .sidebar {
-    width: 65%; /* 1/4th of the container */
-    position: absolute;
+    top: 3rem;
+    width: 95%; /* 1/4th of the container */
     overflow-y: auto; /* Enable vertical scrollbar */
     background-color: clear;
-    font-family: 'pixel', monospace;
     font-size: 36px;
-    left: 35rem;
+    color: gray;
+    pointer-events: none;
     z-index: 1;
   }
   
-  a {
-    border: 3px solid black ;
-    background-color: white;
-    
+  .sidebar {
+    width: 25%; /* 1/4th of the container */
+    position: absolute;
+    overflow-y: auto; /* Enable vertical scrollbar */
+    font-size: 36px;
+    left: 0rem;
+    top: 3rem;
+    z-index: 2;
   }
+
   
   .main-content {
-    width: 75%; /* 3/4th of the container */
+    width: 100%; /* 3/4th of the container */
   }
   
   ul {
     list-style-type: none;
+    
   }
   
   li {
     padding:.5rem;
+    padding-left: 3rem;
   }
-  
-  a {
-    color: blue;
-  }
-  
+  a:link {
+    background-color: clear;
+    padding: 0px 0px 0px 0px;
+    text-decoration: none;
+}
+/*
   a:hover {
     color: green;
     transition: all 1s ease;
   }
-  
-  li {
-    
-  }
-  
-  .sidebar a:visited {
-    margin-left: 35rem; /* Adjust the left margin as needed */
-  }
+  */
   
   /* Move non-visited links to the right */
-  .sidebar a:not(:visited) {
-    margin-left: 2rem; /* Adjust the left margin as needed */
+   li a:not(link) {
+    color: black;
+    background-color: clear;
+ /* Adjust the left margin as needed */
   }
   
+  li a:visited {
+    color: white;
+    text-decoration: underline;
+    background-color: black;
+    padding: 0px;
+  }
+  
+  .sidebar ul li a:active {
+    color: blue;
+  }
