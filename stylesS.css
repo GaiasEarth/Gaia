@@ -2,19 +2,7 @@
   font-family: pixel;
   src: url(pixelFont.ttf);
 }
-
-@media (max-width: 1012px) {
-  ul {
-    font-size: 12px;
-  }
-}
-
-@media (min-width: 1256px) {
-  ul {
-      font-size: 21px;
-    }
-  }
-
+@media only screen and (max-width: 480px) {
 body, html {
     font-family: 'pixel', monospace;
       margin: 0;
@@ -27,7 +15,24 @@ body, html {
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
+  }
 }
+
+@media only screen and (min-width: 780px) {
+  body, html {
+      font-family: 'pixel', monospace;
+        margin: 0;
+        padding: 0;
+        background-color: #000;
+        color: #fff;
+        font-size: 18px;
+      height: 100%;
+  
+      background-size: cover;
+      background-position: center center;
+      background-attachment: fixed;
+    }
+  }
 
   img {
     width: 100%;
@@ -45,9 +50,11 @@ body, html {
   }
   
   .sidebar {
-    width: 35%; /* 1/4th of the container */
+    width: 25%; /* 1/4th of the container */
     position: absolute;
     overflow-y: auto; /* Enable vertical scrollbar */
+    font-family: 'pixel', monospace;
+    font-size: 36px;
     left: 0rem;
     top: 3rem;
     z-index: 2;
@@ -59,26 +66,30 @@ body, html {
   
   ul {
     list-style-type: none;
-  }
-
-  ul p {
-    color:white;
+    
   }
   
   li {
     padding:.5rem;
     padding-left: 3rem;
   }
-
   a:link {
     background-color: clear;
-    padding: 1rem 0rem 1rem 0rem;
+    padding: 0px 0px 0px 0px;
     text-decoration: none;
+}
+/*
+  a:hover {
+    color: green;
+    transition: all 1s ease;
   }
+  */
   
+  /* Move non-visited links to the right */
    li a:not(link) {
     color: black;
     background-color: clear;
+ /* Adjust the left margin as needed */
   }
   
   li a:visited {
@@ -89,7 +100,10 @@ body, html {
   
   .sidebar ul li a:active {
     color: blue;
-    transition: all 1s ease;
   }
 
+  ul p {
+    color:white;
+    background-color: black;
+  }
 
