@@ -1,4 +1,4 @@
-@font-face {
+9989@font-face {
   font-family: pixel;
   src: url(pixelFont.ttf);
 }
@@ -54,7 +54,7 @@ body, html {
     position: absolute;
     overflow-y: auto; /* Enable vertical scrollbar */
     font-family: 'pixel', monospace;
-    font-size: 36px;
+    font-size: 18px;
     left: 0rem;
     top: 3rem;
     z-index: 2;
